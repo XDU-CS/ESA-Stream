@@ -10,6 +10,7 @@ The purposed ESA-Stream framework is outlined in Fig. 1. With five components co
 ![Fig. 1. Stream clustering pipeline of ESA-Stream.](fig/fig1.png?v=1&type=image)
 <center>Fig. 1. Stream clustering pipeline of ESA-Stream.</center>
 
+
  - **Data Stream Acceptor**: It accepts each data point from a stream in real-time, and performs a min-max normalization for each dimension of the data point.
  - **Grid Manager**: It first maps or projects the normalized data point to a grid, then calculates and updates the density and feature vector of the grid online at a time interval $gap$ between two consecutive clustering updates. It then produces a grid density centroid data streams, which is used to reduce the dimensionality efficiently(if needed). Since the centroid data streams is much smaller than the original data, the dimensionality reduction (using PCA) can be done very efficiently.
  - **Parameters Online Learner**: It keeps on learning and updating the parameters online when new data points in the stream arrive.
