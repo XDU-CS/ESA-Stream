@@ -1,0 +1,8 @@
+*.log
+*.temp
+/.idea
+/.settings
+/bin
+/lib
+/out
+*.iml
